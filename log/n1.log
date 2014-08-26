@@ -1,0 +1,6 @@
+From 192.168.1.4: Request: /HTML/video.html
+From 192.168.1.4: GET /Users/EliFriedman/Desktop/VideoSync/HTML/video.html-->200
+From 192.168.1.4: Request: /javascript/jquery-1.7.1.min.js
+From 192.168.1.4: GET /Users/EliFriedman/Desktop/VideoSync/javascript/jquery-1.7.1.min.js-->200
+From 192.168.1.4: Request: /javascript/videoGet.js
+From 192.168.1.4: GET /Users/EliFriedman/Desktop/VideoSync/javascript/videoGet.js-->200

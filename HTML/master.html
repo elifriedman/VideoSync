@@ -1,0 +1,42 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <title>Remote Video</title>
+    <script src="/javascript/jquery-1.7.1.min.js"></script>
+
+</head>
+<body>
+  
+  
+<h1>HTML5 local video file player example</h1>
+<div id="message"></div>
+<input type="file" accept="video/*"/>
+<video controls autoplay></video>
+
+</div>
+    <script>
+    var v = document.getElementsByTagName('video')[0];
+    var a = 0;
+    var poll;
+    
+    function setterSend() {
+    $.ajax({
+            type: "GET",
+            url: "/PHP/setter.php",
+            data: "master&"+v.currentTime+"&"+v.paused,
+            cache: false
+        }).done(function(msg)
+        {
+            poll();
+        }
+        );
+    }
+    </script>
+<script src="/javascript/videoGet.js"></script>
+<script>
+ (poll = function() {
+   setTimeout(setterSend, 100);
+})();
+</script>
+</body>
+</html>
